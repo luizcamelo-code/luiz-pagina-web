@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Primeira Página Web</title>
+    <title>Como Fazer Fregola Sarda | Receita Artesanal</title>
     <style>
         /* Estilização da Página (CSS) */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
+            background-color: #fcf8f2; 
+            color: #4a3b32;
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,78 +21,136 @@
         .container {
             background-color: #ffffff;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
             text-align: center;
-            max-width: 400px;
+            max-width: 450px;
             width: 90%;
             margin: 20px;
         }
 
         h1 {
-            color: #007bff;
-            margin-bottom: 10px;
+            color: #c05c2e; 
+            font-size: 1.8rem;
+            margin-bottom: 5px;
         }
 
-        /* Ajuste do tamanho e proporção da imagem */
+        /* Estilo para a frase de destaque */
+        .subtitulo-destaque {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #a04921;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
         .imagem-post {
-            width: 100%; /* Faz a imagem ocupar a largura máxima do container */
-            max-width: 300px; /* Garante que ela não fique grande demais */
-            height: auto; /* Mantém a proporção para não distorcer */
-            border-radius: 8px; /* Bordas arredondadas para combinar com o layout */
-            margin-bottom: 15px; /* Espaço entre a imagem e o texto */
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
         p {
-            font-size: 1.1rem;
-            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #6b5a50;
+            text-align: left; 
             margin-bottom: 20px;
         }
 
+        .ingredientes {
+            background-color: #fdf6ed;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #c05c2e;
+        }
+
+        .ingredientes h3 {
+            margin-top: 0;
+            color: #c05c2e;
+        }
+
+        .ingredientes ul {
+            margin: 0;
+            padding-left: 20px;
+            text-align: left;
+        }
+
         .botao-interativo {
-            background-color: #007bff;
+            background-color: #c05c2e;
             color: white;
             border: none;
             padding: 12px 24px;
             font-size: 1rem;
-            border-radius: 6px;
+            font-weight: bold;
+            border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.2s ease;
+            width: 100%;
         }
 
         .botao-interativo:hover {
-            background-color: #0056b3;
+            background-color: #a04921;
         }
 
         .mensagem-sucesso {
             margin-top: 20px;
             font-weight: bold;
-            color: #28a745;
+            color: #2e7d32;
             min-height: 24px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 6px;
+            display: none; 
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Olá, Mundo!</h1>
+        <h1>Como Fazer Fregola Sarda</h1>
         
-        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=500" 
-             alt="Linhas de código de programação coloridas exibidas na tela de um computador, representando o desenvolvimento do primeiro site." 
+        <p class="subtitulo-destaque">"Não é bolo, é fregola!"</p>
+        
+        <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=500" 
+             alt="Prato fundo com massa redonda artesanal cozida com molho e frutos do mar, destacando a textura típica da fregola sarda." 
              class="imagem-post">
 
-        <p>Esta é a minha primeira página construída do zero. Clique no botão abaixo para ver a interação acontecer.</p>
+        <div class="ingredientes">
+            <h3>Ingredientes Básicos:</h3>
+            <ul>
+                <li>250g de Sêmola de trigo grano duro</li>
+                <li>Cerca de 120ml de água morna</li>
+                <li>Uma pitada de sal</li>
+            </ul>
+        </div>
+
+        <p>
+            <strong>Como preparar:</strong> Em um prato largo de barro ou tigela grande, salpique a sêmola. Borrife gotas de água morna com sal aos poucos e faça movimentos circulares lentos com os dedos. A sêmola vai rolar e formar pequenas bolinhas (esferas). 
+            Depois, deixe secar e toste as bolinhas no forno a 180°C por 15 minutos até dourarem!
+        </p>
         
-        <button class="botao-interativo" onclick="executarInteracao()">Clique Aqui!</button>
+        <button class="botao-interativo" onclick="mostrarDica()">Ver Dica do Chef ✨</button>
         
         <div id="mensagem" class="mensagem-sucesso"></div>
     </div>
 
     <script>
-        function ejecutarInteracao() {
+        function mostrarDica() {
             const elementoMensagem = document.getElementById('mensagem');
-            elementoMensagem.textContent = "🚀 Parabéns! Você realizou sua primeira interação web!";
-            alert("Interação executada com sucesso!");
+            
+            elementoMensagem.innerHTML = "💡 <strong>Segredo do Chef:</strong> Cozinhe a fregola diretamente no caldo (de vegetais, peixe ou carne) como se fosse um risoto! Ela absorve muito mais sabor do que se for cozida apenas na água.";
+            
+            elementoMensagem.style.display = "block";
+            
+            alert("Você liberou uma dica de culinária!");
         }
     </script>
 
