@@ -1,42 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Atividade 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Primeira Página Web</title>
+    <style>
+        /* Estilização da Página (CSS) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        /* Ajuste do tamanho e proporção da imagem */
+        .imagem-post {
+            width: 100%; /* Faz a imagem ocupar a largura máxima do container */
+            max-width: 300px; /* Garante que ela não fique grande demais */
+            height: auto; /* Mantém a proporção para não distorcer */
+            border-radius: 8px; /* Bordas arredondadas para combinar com o layout */
+            margin-bottom: 15px; /* Espaço entre a imagem e o texto */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .botao-interativo {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .botao-interativo:hover {
+            background-color: #0056b3;
+        }
+
+        .mensagem-sucesso {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #28a745;
+            min-height: 24px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Minha Página</h1>
+    <div class="container">
+        <h1>Olá, Mundo!</h1>
+        
+        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=500" 
+             alt="Linhas de código de programação coloridas exibidas na tela de um computador, representando o desenvolvimento do primeiro site." 
+             class="imagem-post">
 
-    <p>Este é um exemplo com links, imagens e espaçamento.</p>
+        <p>Esta é a minha primeira página construída do zero. Clique no botão abaixo para ver a interação acontecer.</p>
+        
+        <button class="botao-interativo" onclick="executarInteracao()">Clique Aqui!</button>
+        
+        <div id="mensagem" class="mensagem-sucesso"></div>
+    </div>
 
-    <br>
-
-    <h2>Links importantes</h2>
-
-    <p>
-        Acesse o Google: 
-        <a href="https://www.google.com" target="_blank">Clique aqui</a>
-    </p>
-
-    <p>
-        Acesse o YouTube: 
-        <a href="https://www.youtube.com" target="_blank">Clique aqui</a>
-    </p>
-
-    <br>
-
-    <h2>Imagens</h2>
-
-    <p>Imagem de exemplo:</p>
-
-    <img src="https://via.placeholder.com/300" alt="Imagem exemplo">
-
-    <br><br>
-
-    <img src="https://via.placeholder.com/200" alt="Outra imagem">
-
-    <br><br>
+    <script>
+        function ejecutarInteracao() {
+            const elementoMensagem = document.getElementById('mensagem');
+            elementoMensagem.textContent = "🚀 Parabéns! Você realizou sua primeira interação web!";
+            alert("Interação executada com sucesso!");
+        }
+    </script>
 
 </body>
 </html>
